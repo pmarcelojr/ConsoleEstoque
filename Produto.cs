@@ -41,5 +41,13 @@ namespace ConsoleEstoque
         {
             Qtd -= a;
         }
+        // Override
+        public override string ToString()
+        {
+            return Nome + " , Preço R$ " + Preco.ToString("F2", CultureInfo.InvariantCulture) 
+                + " , " + Qtd.ToString("F2", CultureInfo.InvariantCulture)
+                + " Unidades em Estoque, valor Total: R$ " 
+                + TotalEstoque().ToString("F2", CultureInfo.InvariantCulture);
+        }
     }
 }
