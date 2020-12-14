@@ -7,8 +7,8 @@ namespace ConsoleEstoque
     {
         // Atributos
         private string _nome;
+        private double _preco;
         // Propriedade Autoimplementadas
-        public double Preco { get; private set; }
         public int Qtd { get; private set; }
 
         // Construtores
@@ -17,7 +17,7 @@ namespace ConsoleEstoque
         public Produto(string nome, double preco, int qtd)
         {
             this._nome = nome;
-            this.Preco = preco;
+            this._preco = preco;
             this.Qtd = qtd;
         }
         // Propriedade Customizada
@@ -27,6 +27,10 @@ namespace ConsoleEstoque
                 if(value != null && value.Length > 1)
                     _nome = value;
             }
+        }
+        public double Preco {
+            get { return _preco; }
+            set { _preco = value; }
         }
         // Metodos
         public double TotalEstoque()
