@@ -7,6 +7,7 @@ namespace _ConsoleEstoque
     {
         // Atributos
         private string _nome;
+        // Propriedade Autoimplementadas
         public double Preco { get; private set; }
         public int Qtd { get; private set; }
 
@@ -18,6 +19,14 @@ namespace _ConsoleEstoque
             this._nome = nome;
             this.Preco = preco;
             this.Qtd = qtd;
+        }
+        // Propriedade Customizada
+        public string Nome {
+            get { return _nome; }
+            set {
+                if(value != null && value.Length > 1)
+                    _nome = value;
+            }
         }
     }
 }
