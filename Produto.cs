@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace _ConsoleEstoque
+namespace ConsoleEstoque
 {
     class Produto
     {
@@ -27,6 +27,19 @@ namespace _ConsoleEstoque
                 if(value != null && value.Length > 1)
                     _nome = value;
             }
+        }
+        // Metodos
+        public double TotalEstoque()
+        {
+            return Preco * Qtd;
+        }
+        public void AddProduto(int a)
+        {
+            Qtd += a;
+        }
+        public void DelProduto(int a)
+        {
+            Qtd -= a;
         }
     }
 }

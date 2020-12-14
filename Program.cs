@@ -6,7 +6,7 @@ namespace ConsoleEstoque
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Produto p1 = new Produto("TV", 900.00, 10);
         }
     }
 }
